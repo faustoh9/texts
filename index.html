@@ -3,132 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لایحه دفاعیه شرکت آبنوس گشت (فلای‌تودی)</title>
+    <title>کاور پرونده حقوقی</title>
     <style>
+        /* ایمپورت فونت فارسی استاندارد و زیبا */
+        @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.0.0/Vazirmatn-font-face.css');
+        
         body {
-            font-family: "Vazirmatn", "B Nazanin", Tahoma, Arial, sans-serif;
-            background-color: #f0f2f5;
-            color: #222;
-            line-height: 2;
-            margin: 0;
+            font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
+            background-color: #e2e8f0;
+            color: #2d3748;
+            display: flex;
+            justify-content: center;
             padding: 20px;
+            margin: 0;
         }
-        .paper {
-            background-color: #fff;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 50px 60px;
-            border-radius: 5px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border: 1px solid #d1d5db;
+        
+        .cover-container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 210mm; /* عرض استاندارد برگه A4 */
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-top: 10px solid #1a365d; /* نوار سرمه ای بالای فرم */
+            border-radius: 8px;
         }
-        .center-heading {
+        
+        .header {
             text-align: center;
-            font-weight: bold;
-            font-size: 1.2em;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #cbd5e0;
+            padding-bottom: 20px;
+        }
+        
+        .header h1 {
+            margin: 0;
+            color: #1a365d;
+            font-size: 28px;
+            font-weight: 800;
+        }
+        
+        .header p {
+            margin: 8px 0 0;
+            color: #718096;
+            font-size: 15px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
             margin-bottom: 20px;
         }
-        .subject-box {
-            background-color: #f9fafb;
-            border: 1px solid #e5e7eb;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 30px;
+        
+        th, td {
+            border: 2px solid #a0aec0;
+            padding: 12px 15px;
+            vertical-align: top;
+        }
+        
+        .section-title {
+            background-color: #2b6cb0;
+            color: #ffffff;
             font-weight: bold;
+            text-align: center;
+            font-size: 17px;
+            padding: 12px;
+            letter-spacing: 0.5px;
         }
-        h3 {
-            color: #1f2937;
-            margin-top: 35px;
-            margin-bottom: 15px;
-            font-size: 1.1em;
-            border-bottom: 2px solid #e5e7eb;
-            padding-bottom: 5px;
+        
+        .cell-title {
+            display: block;
+            font-size: 13px;
+            color: #4a5568;
+            margin-bottom: 8px;
+            font-weight: 700;
         }
-        p {
-            text-align: justify;
-            margin-bottom: 15px;
-            font-size: 1.05em;
+        
+        .cell-value {
+            display: block;
+            font-size: 16px;
+            color: #1a202c;
+            min-height: 25px; /* فضای خالی برای نوشتن دستی */
         }
-        .indent {
-            padding-right: 20px;
+        
+        .bg-light {
+            background-color: #f7fafc;
         }
-        .signature {
-            margin-top: 50px;
-            text-align: left;
-            font-weight: bold;
-            padding-left: 50px;
-        }
-        ul {
-            list-style-type: none;
-            padding-right: 20px;
-        }
-        ul li {
-            margin-bottom: 10px;
-            text-align: justify;
+
+        /* تنظیمات مخصوص پرینت برای چاپ دقیق روی کاغذ */
+        @media print {
+            body {
+                background-color: #fff;
+                padding: 0;
+            }
+            .cover-container {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+                max-width: 100%;
+            }
+            .section-title {
+                background-color: #2b6cb0 !important;
+                color: white !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .bg-light {
+                background-color: #f7fafc !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            th, td {
+                border-color: #4a5568;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="paper">
-        
-        <div class="center-heading">
-            بسمه تعالي
+    <div class="cover-container">
+        <!-- سربرگ -->
+        <div class="header">
+            <h1>فرم خلاصه و کاور پرونده حقوقی</h1>
+            <p>موسسه حقوقی / دفتر وکالت پایه یک دادگستری</p>
         </div>
 
-        <p><strong>رياست محترم دادگاه هاي صلح شهر تهران</strong></p>
+        <table>
+            <!-- بخش 1: اطلاعات پایه پرونده -->
+            <tr>
+                <td class="bg-light" style="width: 33.33%;">
+                    <span class="cell-title">شماره پرونده / کلاسه بایگانی:</span>
+                    <span class="cell-value"></span>
+                </td>
+                <td class="bg-light" style="width: 33.33%;">
+                    <span class="cell-title">تاریخ تشکیل پرونده:</span>
+                    <span class="cell-value"></span>
+                </td>
+                <td class="bg-light" style="width: 33.33%;">
+                    <span class="cell-title">مرجع / شعبه رسیدگی‌کننده:</span>
+                    <span class="cell-value"></span>
+                </td>
+            </tr>
+            
+            <!-- بخش 2: مشخصات موکل -->
+            <tr>
+                <td colspan="3" class="section-title">مشخصات موکل / خواهان / شاکی</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="cell-title">نام و نام خانوادگی:</span>
+                    <span class="cell-value"></span>
+                </td>
+                <td>
+                    <span class="cell-title">کد ملی / شناسه ملی:</span>
+                    <span class="cell-value"></span>
+                </td>
+                <td>
+                    <span class="cell-title">نام پدر:</span>
+                    <span class="cell-value"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="cell-title">شماره تماس (همراه و ثابت):</span>
+                    <span class="cell-value"></span>
+                </td>
+                <td colspan="2">
+                    <span class="cell-title">آدرس دقیق محل سکونت / اقامتگاه:</span>
+                    <span class="cell-value"></span>
+                </td>
+            </tr>
 
-        <div class="subject-box">
-            موضوع: لايحه دفاعيه شركت خدمات مسافرت هوايي آبنوس گشت تهران - فلاي‌تودي در پرونده كلاسه ...
-        </div>
+            <!-- بخش 3: مشخصات طرف دعوی -->
+            <tr>
+                <td colspan="3" class="section-title">مشخصات طرف دعوی / خوانده / متشاکی</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="cell-title">نام و نام خانوادگی / نام شرکت:</span>
+                    <span class="cell-value"></span>
+                </td>
+                <td>
+                    <span class="cell-title">کد ملی:</span>
+                    <span class="cell-value"></span>
+                </td>
+                <td>
+                    <span class="cell-title">شماره تماس:</span>
+                    <span class="cell-value"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <span class="cell-title">آدرس طرف دعوی (محل ابلاغ):</span>
+                    <span class="cell-value"></span>
+                </td>
+            </tr>
 
-        <p>با سلام و احترام،</p>
-        
-        <p>اينجانب به وكالت از شركت خدمات مسافرت هوايي آبنوس گشت تهران (فلاي‌تودي)، در پاسخ به دعواي مطروحه از سوي خواهان، ضمن تكذيب كليه ادعاهاي نامبرده عليه موكل، مراتب دفاعيات مستند خود را به شرح ذيل به استحضار مقام محترم دادگاه مي‌رساند:</p>
+            <!-- بخش 4: مشخصات دعوی -->
+            <tr>
+                <td colspan="3" class="section-title">مشخصات و موضوع دعوی</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <span class="cell-title">موضوع اصلی پرونده / خواسته:</span>
+                    <span class="cell-value"></span>
+                </td>
+                <td>
+                    <span class="cell-title">مبلغ تقویم شده (ریال):</span>
+                    <span class="cell-value"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="height: 120px;">
+                    <span class="cell-title">شرح خلاصه موضوع و اقدامات حقوقی مورد نیاز:</span>
+                    <span class="cell-value"></span>
+                </td>
+            </tr>
 
-        <p><strong>مقدمتاً به استحضار مي‌رساند:</strong></p>
-        
-        <p>در پرونده حاضر، هيچ‌گونه قصور، تقصير يا نقض تعهدي از سوي شركت موكل رخ نداده است و خسارات ادعايي خواهان، تماماً ناشي از اهمال و عدم دقت ايشان در بررسي راه‌هاي ارتباطي شخصي‌شان مي‌باشد. شرح ماوقع به قرار زير است:</p>
-        
-        <p>خواهان در تاريخ 16 مرداد 1404، اقدام به خريد سه فقره بليت الكترونيكي پرواز مسير استانبول به مشهد مورخ 10 شهريور 1404 با مشخصات مندرج در (پيوست شماره 1) نموده است. سپس در تاريخ 4 شهريور 1404، شركت هواپيمايي ايران‌پرتور (ايران‌اير‌تور) موضوع تعجيل در ساعت پرواز از ساعت 22:10 به 14:30 همان روز را مستقيماً به خواهان اطلاع‌رساني كرده (پيوست شماره 2) و متعاقباً مراتب را به شركت موكل نيز اعلام داشته است. به‌دنبال اين امر، شركت موكل نيز بلافاصله از طريق تمامي مجاري و راه‌هاي ارتباطي موجود، اقدام به اطلاع‌رساني به خواهان نموده است كه مشروح اقدامات انجام‌شده به شرح ذيل است:</p>
-
-        <h3>الف) دفاعيات و ايرادات شكلي</h3>
-        
-        <p>پيش از ورود دادگاه به ماهيت دعوا، بايد بر عدم صلاحيت و نتيجتاً عدم استماع دعوا در اين مرحله تاكيد شود.</p>
-        <p>صنعت هوانوردي داراي نظام‌نامه شبه‌قضايي و نظارتي خاص خود است و محاكم دادگستري پيش از اظهارنظر تخصصي مراجع ذي‌ربط، نبايد وارد ماهيت اين دعاوي شوند.</p>
-        
-        <ul>
-            <li><strong>مستند اول:</strong> بند ب ماده 5 قانون هواپيمايي كشوري كه سازمان هواپيمايي را مرجع نظارت بر فعاليت‌هاي هوانوردي و حقوق مسافر تعيين كرده است.</li>
-            <li><strong>مستند دوم:</strong> ماده 31 آيين‌نامه نظارت بر تأسيس و فعاليت دفترهاي خدمات مسافرتي، سياحتي، جهانگردي و زيارتي (مصوب 1380 هيئت وزيران) كه صراحتاً رسيدگي به تخلفات آژانس‌ها و شكايات اشخاص را در صلاحيت كميته فني سازمان هواپيمايي كشوري مي‌داند.</li>
-            <li><strong>مستند سوم:</strong> تبصره 4 ماده 31 همان آيين‌نامه كه رسيدگي به شكايات مسافران را مقيد به بررسي در سامانه حقوق مسافر سازمان هواپيمايي نموده است.</li>
-        </ul>
-
-        <h3>اولاً: عدم مسئوليت موكل در تغيير برنامه پروازي و ماهيت واسطه‌گري پلتفرم</h3>
-        <p>شركت آبنوس گشت صرفاً يك پلتفرم ارائه‌دهنده خدمات الكترونيكي و واسطه فروش بليت است. تصميم‌گيري در خصوص تغيير زمان، تأخير، تعجيل يا ابطال پروازها منحصراً در اختيار متصدي حمل‌ونقل هوايي (در اين پرونده شركت هواپيمايي ايران‌ايرتور) بوده و موكل هيچ‌گونه دخالتي در عمليات پروازي ندارد. مطابق شيوه‌نامه لازم‌الاجراي حقوق مسافر در پروازهاي بين‌المللي مصوب سازمان هواپيمايي كشوري (CAD 1940)و بند 1-3 آن، مسئوليت اطلاع‌رساني اوليه تغييرات پروازي و جبران خسارات ناشي از آن، تماماً بر عهده شركت هواپيمايي است و وظيفه آژانس فروش صرفاً انتقال اطلاعات دريافتي به مسافر در صورت اطلاع و درخواست ايرلاين مي‌باشد.</p>
-
-        <h3>ثانياً: انجام تعهدات اطلاع‌رساني از سوي موكل</h3>
-        <p>برخلاف ادعاي خواهان محترم مبني بر عدم اطلاع‌رساني، اسناد سيستم‌هاي اطلاع رساني نشان مي‌دهد كه موكل وظيفه خود را انجام داده است:</p>
-        <div class="indent">
-            <p>1. مطابق اعلام رسمي شركت ايران‌ايرتور (پيوست شماره 3)، اين شركت در تاريخ 4 شهريور 1404 (26 آگوست - 4 روز پيش از ارجاع به شركت موكل) شخصاً ايميل اطلاع‌رساني را به آدرس خواهان ارسال نموده و متعاقباً پس از تماس‌هاي مكرر و عدم پاسخگويي و در دسترس نبودن مسافر، موضوع را در تاريخ 8 شهريور 1404 ساعت 19:08 جهت اطلاع‌رساني به شركت موكل ارجاع داده است.</p>
-            <p>2. پرسنل پشتيباني شركت موكل به محض دريافت پيام ايرلاين، در عرض تنها 5 دقيقه، در تاريخ 8 شهريور ساعت 19:13 پيامك تعجيل پرواز را به شماره تلفن معرفي‌شده مسافر (09151083017) ارسال كرده‌اند كه كد وضعيت (DeliveredToOperator) نشان‌دهنده تحويل موفق به شبكه مخابراتي است (پيوست شماره 4).</p>
-            <p>3. نظر به اينكه تلفن همراه مسافر خاموش بوده است (موضوعي كه هم توسط شركت هواپيمايي و هم در لاگ سيستم شركت موكل صراحتاً ثبت شده است)، شركت موكل جهت اطمينان كامل، هم‌زمان در ساعت 19:14 موضوع را مجدداً به ايميل خواهان (sepideh_49@yahoo.com) ابلاغ نموده است (پيوست‌هاي شماره 5).</p>
-        </div>
-
-        <h3>ثالثاً: قصور خواهان در پيگيري وضعيت بليت</h3>
-        <p>علت جا ماندن خواهان از پرواز، نه عدم اطلاع‌رساني، بلكه خاموش بودن تلفن همراه ايشان در كشور مقصد و عدم بررسي ايميل‌هاي شخصي بوده است.</p>
-        <p>مطابق قوانين و مقررات پذيرفته‌شده توسط مسافر در هنگام خريد بليت از سايت فلاي‌تودي (پيوست شماره 6)، خواهان اقرار و تعهد نموده است كه: "شماره تلفن اعلامي در اختيار اينجانب بوده و كليه پيامك‌هاي اطلاع‌رساني اعم از تغييرات زماني در حكم اعلام به اينجانب بوده ... و در صورت مسدودي يا عدم دسترسي، كليه عواقب آن بر عهده كاربر است و حق ادعا عليه فلاي‌تودي سلب مي‌گردد."</p>
-        <p>فلذا، وقتي خواهان تلفن خود را خاموش نگه داشته و ايميل‌هاي ارسالي (هم از سوي ايرلاين و هم از سوي موكل در روزهاي متفاوت) را بررسي ننموده، مصداق بارز اقدام عليه خويش بوده و مطابق ماده 520 قانون آيين دادرسي مدني، زنجيره سببيت ميان فعل موكل و خسارت ادعايي كاملاً گسسته است. هيچ شخصي را نمي‌توان مسئول خاموش بودن دستگاه تلفن و عدم بررسي ايميل شخص ديگر دانست.</p>
-
-        <h3>رابعاً: عدم استحقاق خواهان در مطالبه خسارات غيرمستقيم</h3>
-        <p>خواهان علاوه بر مطالبه وجه بليت، هزينه‌هايي نظير اقامت هتل، اياب و ذهاب و خريد بليت ثانويه را مطالبه كرده است. فارغ از اينكه بخشي از قيمت بليت (به مبلغ 82,467,273 ريال) طبق مقررات شركت هواپيمايي ايرتور مسترد شده است، مطالبه خسارات مازاد، فاقد وجاهت قانوني است؛ زيرا اولاً خريد بليت از شركت هواپيمايي تابع اصول و مقررات آن شركت است. ثانياً خواهان با خريد بليت و تاييد اين قوانين، ادعايي خارج از توافق صورت گرفته دارد.</p>
-
-        <h3>نتيجه‌گيري:</h3>
-        <p>با عنايت به اينكه شركت آبنوس گشت (فلاي‌تودي) به‌محض دريافت اطلاعيه ايرلاين، از طريق ارسال پيامك و ايميل، وظيفه اطلاع‌رساني خود را به‌طور كامل ايفا نموده و مانع دريافت پيام، منحصراً خاموش بودن تلفن خواهان و عدم بررسي صندوق پست الكترونيكي بوده است، هيچ‌گونه مبناي قانوني براي انتساب مسئوليت مدني يا قراردادي به موكل وجود ندارد. لذا از محضر دادگاه محترم، تقاضاي صدور حكم بر بطلان دعواي خواهان نسبت به خوانده رديف سوم مورد استدعا مي‌باشد.</p>
-
-        <div class="signature">
-            با تجديد احترام
-        </div>
-
+            <!-- بخش 5: روند رسیدگی -->
+            <tr>
+                <td colspan="3" class="section-title">روند رسیدگی و پیگیری‌ها</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="cell-title">تاریخ جلسه اول رسیدگی:</span>
+                    <span class="cell-value"></span>
+                </td>
+                <td>
+                    <span class="cell-title">تاریخ جلسه دوم / تجدیدنظر:</span>
+                    <span class="cell-value"></span>
+                </td>
+                <td>
+                    <span class="cell-title">نتیجه و شماره دادنامه:</span>
+                    <span class="cell-value"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="height: 80px;">
+                    <span class="cell-title">ملاحظات، هشدارها و مدارک پیوست:</span>
+                    <span class="cell-value"></span>
+                </td>
+            </tr>
+        </table>
     </div>
 
 </body>
