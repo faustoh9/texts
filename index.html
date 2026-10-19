@@ -3,408 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تحلیل و راهکارهای حقوقی قرارداد آبنوس گشت و هایپراستار</title>
+    <title>نقشه راه حقوقی جلسه با همکاران سیستم</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
     <style>
-        :root {
-            --primary: #1e3a8a;
-            --primary-light: #eff6ff;
-            --secondary: #0f766e;
-            --secondary-light: #f0fdfa;
-            --danger: #b91c1c;
-            --danger-light: #fef2f2;
-            --warning: #b45309;
-            --warning-light: #fffbeb;
-            --gray-50: #f8fafc;
-            --gray-100: #f1f5f9;
-            --gray-200: #e2e8f0;
-            --gray-700: #334155;
-            --gray-900: #0f172a;
-        }
-
-        * {
-            box-sizing: border-box;
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            font-size: 11pt;
             margin: 0;
             padding: 0;
         }
-
-        body {
-            font-family: system-ui, -apple-system, "Segoe UI", Roboto, Tahoma, Arial, sans-serif;
-            background-color: var(--gray-50);
-            color: var(--gray-900);
-            line-height: 1.8;
-            padding: 24px;
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 15mm;
+            margin: 10mm auto;
+            border: 1px #D3D3D3 solid;
+            border-radius: 5px;
+            background: white;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
         }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            border: 1px solid var(--gray-200);
+        h1, h2, h3, h4 {
+            color: #1a3e5c;
+            margin-bottom: 10px;
         }
-
-        header {
-            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
-            color: #ffffff;
-            padding: 32px 28px;
-        }
-
-        header h1 {
-            font-size: 22px;
-            margin-bottom: 8px;
-            font-weight: 700;
-        }
-
-        header p {
-            font-size: 14px;
-            color: #cbd5e1;
-        }
-
-        .content {
-            padding: 28px;
-        }
-
-        .section-card {
-            margin-bottom: 24px;
-            border: 1px solid var(--gray-200);
-            border-radius: 8px;
-            background: #ffffff;
-            overflow: hidden;
-        }
-
-        .section-card.critical {
-            border: 2px solid var(--danger);
-            background: var(--danger-light);
-        }
-
-        .section-card.critical .card-header {
-            background-color: #fee2e2;
-            color: var(--danger);
-            border-bottom: 1px solid #fca5a5;
-        }
-
-        .card-header {
-            padding: 14px 20px;
-            background-color: var(--gray-100);
-            font-weight: 700;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid var(--gray-200);
-        }
-
-        .badge {
-            font-size: 12px;
-            padding: 4px 10px;
-            border-radius: 9999px;
-            font-weight: 600;
-        }
-
-        .badge-danger {
-            background-color: #fecaca;
-            color: var(--danger);
-        }
-
-        .badge-primary {
-            background-color: var(--primary-light);
-            color: var(--primary);
-        }
-
-        .card-body {
-            padding: 20px;
-        }
-
-        .comment-box {
-            background-color: var(--warning-light);
-            border-right: 4px solid var(--warning);
-            padding: 12px 16px;
-            margin-bottom: 16px;
-            border-radius: 0 6px 6px 0;
-            font-size: 13.5px;
-            color: var(--gray-700);
-        }
-
-        .comment-box strong {
-            color: var(--warning);
-        }
-
-        .analysis {
-            margin-bottom: 16px;
-            font-size: 14px;
-            color: var(--gray-700);
-        }
-
-        .suggested-box {
-            background-color: var(--secondary-light);
-            border-right: 4px solid var(--secondary);
-            padding: 14px 18px;
-            border-radius: 0 6px 6px 0;
-            margin-top: 12px;
-        }
-
-        .suggested-title {
-            font-weight: 700;
-            color: var(--secondary);
-            font-size: 13.5px;
-            margin-bottom: 6px;
-        }
-
-        .suggested-text {
-            font-size: 13.5px;
-            color: #134e4a;
-            font-style: italic;
-            line-height: 1.9;
-        }
-
-        .plan-b {
-            background-color: #f3f4f6;
-            border-right: 4px solid #4b5563;
-            padding: 12px 16px;
-            border-radius: 0 6px 6px 0;
-            margin-top: 10px;
-            font-size: 13px;
-            color: var(--gray-700);
-        }
-
+        h1 { font-size: 18pt; text-align: center; border-bottom: 2px solid #1a3e5c; padding-bottom: 10px; }
+        h2 { font-size: 14pt; border-bottom: 1px solid #ccc; padding-bottom: 5px; margin-top: 20px;}
+        h3 { font-size: 12pt; color: #b30000; }
+        .highlight { background-color: #fff3cd; padding: 10px; border-right: 4px solid #ffc107; margin-bottom: 15px; }
+        .alert { background-color: #f8d7da; color: #721c24; padding: 10px; border-right: 4px solid #dc3545; margin-bottom: 15px; }
+        .success { background-color: #d4edda; color: #155724; padding: 10px; border-right: 4px solid #28a745; margin-bottom: 15px; }
+        ul { margin-top: 5px; margin-bottom: 15px; padding-right: 20px; }
+        li { margin-bottom: 8px; text-align: justify; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 10pt; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: right; }
+        th { background-color: #f2f2f2; color: #333; }
+        .footer-note { font-size: 9pt; text-align: center; color: #777; margin-top: 20px; border-top: 1px solid #eee; padding-top: 10px;}
+        
         @media print {
-            body {
-                background: none;
-                padding: 0;
-            }
-            .container {
-                box-shadow: none;
-                border: none;
-                max-width: 100%;
-            }
+            body { background: none; }
+            .page { margin: 0; border: initial; border-radius: initial; width: initial; min-height: initial; box-shadow: initial; background: initial; page-break-after: always; }
+            .page:last-child { page-break-after: auto; }
+            @page { margin: 15mm; size: A4; }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <header>
-        <h1>بررسی تخصصی و راهکارهای حل تعارضات پیش‌نویس قرارداد</h1>
-        <p>طرفین: شرکت هایپرمارکت‌های ماف پارس (هایپراستار) و شرکت خدمات مسافرتی آبنوس گشت</p>
-    </header>
+    <div class="page">
+        <h1>نقشه راه حقوقی و استراتژیک جلسه با شرکت همکاران سیستم</h1>
+        <p><strong>موضوع جلسه:</strong> تعیین تکلیف قرارداد شماره BFS/043/1404 و اخطاریه مورخ 1405/05/27</p>
+        <p><strong>نقش شما:</strong> مدیر حقوقی شرکت آبنوس گشت (فلای تودی)</p>
 
-    <div class="content">
-
-        <!-- مورد ۱: مفاصا حساب ماده ۳۸ تامین اجتماعی -->
-        <div class="section-card critical">
-            <div class="card-header">
-                <span>۱. مشکل و معضل اصلی: بند ۸ (کسورات قانونی و مفاصا حساب ماده ۳۸ تأمین اجتماعی)</span>
-                <span class="badge badge-danger">ریسک بحرانی مالی</span>
-            </div>
-            <div class="card-body">
-                <div class="comment-box">
-                    <strong>کامنت‌های موجود در قرارداد:</strong><br>
-                    • <code>[Ma11]</code>: «این قرارداد مشمول ماده ۳۸ نمی‌باشد و می‌بایست حذف شود.»<br>
-                    • <code>[MH(12R11)]</code>: «با تکس مطرح شود.»
-                </div>
-                <div class="analysis">
-                    <strong>ریشه مشکل و تحلیل فنی:</strong><br>
-                    قراردادهای آژانس‌های مسافرتی ماهیتاً <strong>«خرید بلیت، رزرواسیون و خدمات فروش/حق‌العمل‌کاری»</strong> هستند، نه قرارداد پیمانکاری عمرانی یا خدمات مشمول کارمزد نیروی انسانی مصرح در ماده ۳۸. بلوکه شدن ۵٪ از کل پرداخت‌ها (که مارجین سود ناخالص آژانس از بلیت و تور معمولاً زیر ۵٪ تا ۹٪ است) یعنی حبس شدن کل سود و حتی بخشی از اصل سرمایه نزد کارفرما؛ ضمن اینکه شعب تأمین اجتماعی برای فروش بلیت و رزرو هتل اساساً پرونده و کد کارگاه پیمان اختصاص نمی‌دهند و دریافت مفاصاحساب آن غیرممکن یا فرسایشی خواهد بود.
-                </div>
-                <div class="suggested-box">
-                    <div class="suggested-title">راهکار حقوقی و متن جایگزین توافقی:</div>
-                    <div class="suggested-text">
-                        «با عنایت به ماهیت موضوع قرارداد حاضر که از مصادیق خدمات فروش، عاملیت رزرواسیون و بازرگانی بوده و فاقد هرگونه کارکرد مقاطعه‌کاری و تأمین نیروی انسانی در محل کارفرما می‌باشد، این قرارداد مشمول کسر حق بیمه موضوع ماده ۳۸ قانون تأمین اجتماعی نبوده و پرداخت‌ها بدون کسر ۵٪ و سپرده بیمه انجام خواهد شد. مسئولیت بیمه پرسنل طرف دوم راساً بر عهده طرف دوم خواهد بود.»
-                    </div>
-                </div>
-                <div class="plan-b">
-                    <strong>پلن B (در صورت اصرار شدید دپارتمان مالی هایپراستار):</strong><br>
-                    چنانچه سیستم حسابداری هایپراستار به دلیل الزامات هلدینگی بر کسر سپرده اصرار ورزید، توافق شود که ۵٪ کسورات صرفاً به <strong>«کارمزد و حق‌العمل خدمات (Service Fee) آژانس»</strong> تعلق گیرد، نه به کل رقم صورت‌حساب بلیت‌ها و هتل‌ها.
-                </div>
-            </div>
+        <div class="highlight">
+            <strong>خلاصه وضعیت فعلی (Fact Sheet):</strong><br>
+            تاریخ پایان قرارداد طبق ماده ۳: <strong>۱۴۰۴/۱۲/۲۵</strong> بوده است. اکنون بیش از ۵ ماه از انقضای قرارداد گذشته است. بخش عظیمی از تعهدات کلیدی (داشبورد، جبران خدمات، وفاداری، مکاتبات) پیاده‌سازی نشده یا ناقص است. نامه‌ی رسمی اخطار در تاریخ ۱۴۰۵/۰۵/۲۷ ارسال شده و مسئولیت تاخیر صراحتاً به پیمانکار منتقل شده است.
         </div>
 
-        <!-- مورد ۲: تمدید خودکار -->
-        <div class="section-card">
-            <div class="card-header">
-                <span>۲. تبصره ۱ ماده ۲: تمدید خودکار قرارداد</span>
-                <span class="badge badge-primary">حقوقی / اجرایی</span>
-            </div>
-            <div class="card-body">
-                <div class="comment-box">
-                    <strong>کامنت قرارداد:</strong><br>
-                    • <code>[MH1]</code>: «تمدید خودکار غیر قابل قبول است.»
-                </div>
-                <div class="analysis">
-                    <strong>علت مخالفت و تحلیل:</strong> شرکت‌های بزرگ چندملیتی معمولاً به دلیل آیین‌نامه‌های حاکمیت شرکتی و لزوم ارزیابی عملکرد سالانه، تمدید اتوماتیک را رد می‌کنند. حذف تمدید خودکار به نفع آبنوس گشت نیز هست تا شرایط اعتباری و نرخ‌ها را متناسب با تورم سالانه بازبینی کند.
-                </div>
-                <div class="suggested-box">
-                    <div class="suggested-title">متن پیشنهادی جایگزین (تمدید با توافق کتبی):</div>
-                    <div class="suggested-text">
-                        «ادامه این قرارداد پس از انقضای مدت، منوط به تراضی کتبی طرفین و امضای الحاقیه تمدید حداقل ۳۰ روز قبل از پایان مدت قرارداد خواهد بود.»
-                    </div>
-                </div>
-            </div>
+        <h2>۱. نقش کلی شما در جلسه (چهره‌ی حقوقی جلسه)</h2>
+        <ul>
+            <li><strong>تنظیم‌گر مرزها (Bad Cop حساب‌شده):</strong> مدیر محصول (Product Manager) باید روی جزئیات فنی و نقص‌ها بحث کند. نقش شما این است که این نقص‌های فنی را به <strong>«نقض صریح مفاد قرارداد»</strong> ترجمه کنید.</li>
+            <li><strong>هدایت‌گر جلسه به سمت نتیجه مکتوب:</strong> اجازه ندهید جلسه با وعده‌های شفاهی تمام شود. خروجی جلسه باید یک «صورتجلسه الزام‌آور» با تعیین زمان‌بندی دقیق و جرائم تاخیر باشد.</li>
+            <li><strong>اهرم فشار (Leverage):</strong> شما نماینده‌ی ضمانت‌اجراهای قرارداد هستید. باید به طرف مقابل تفهیم کنید که شرکت فلای‌تودی در آستانه‌ی اقدام حقوقی و ضبط تضامین است و این جلسه «آخرین فرصت مسالمت‌آمیز» است.</li>
+        </ul>
+
+        <h2>۲. فرصت‌ها و اهرم‌های فشار ما در این قرارداد (نقاط قوت)</h2>
+        <div class="success">
+            <ul>
+                <li><strong>پایان مدت قرارداد (ماده ۳-۱):</strong> مهلت قرارداد در ۱۴۰۴/۱۲/۲۵ تمام شده است. ادامه کار مجری در حال حاضر فاقد پوشش زمانی است و ما حق داریم قرارداد را یک‌طرفه به دلیل تخلف فسخ کنیم.</li>
+                <li><strong>سپرده حسن انجام کار (ماده ۲-۲-۶):</strong> ۱۰ درصد از مبلغ قرارداد (بیش از ۲.۱ میلیارد تومان) نزد ماست و آزادسازی آن منوط به تایید مدیر پروژه ماست. این بزرگترین اهرم مالی شماست.</li>
+                <li><strong>عدم دریافت تاییدیه (ماده ۴-۵):</strong> صراحتاً ذکر شده تحویل سیستم‌ها منوط به تایید مدیر پروژه کارفرماست. مجری نمی‌تواند ادعا کند کار تمام شده است.</li>
+                <li><strong>نامه‌ی اخطار مستند:</strong> ارسال نامه شماره 1405/05/27 با ذکر دقیق موارد نقص (داشبورد، وفاداری، حقوق دستمزد)، مانع از ادعای «تایید ضمنی» یا «اسقاط حق اعتراض» از سوی ما شده است.</li>
+                <li><strong>پیوست فنی دقیق (داشبورد و امکانات):</strong> فایل پیوست داشبورد بسیار دقیق و شامل ریز گزارشات، Drill-down و شاخص‌های مالی است (مغایرت‌ها، تحلیل سنی مطالبات، Aging). ادعای مجری مبنی بر "عدم شفافیت خواسته‌ها" کاملاً مردود است.</li>
+            </ul>
         </div>
 
-        <!-- مورد ۳: بخشنامه‌های ایرلاین‌ها -->
-        <div class="section-card">
-            <div class="card-header">
-                <span>۳. بند ۳.۴: ارسال کلیه بخشنامه‌های دریافتی ایرلاین‌ها</span>
-                <span class="badge badge-primary">عملیاتی</span>
-            </div>
-            <div class="card-body">
-                <div class="comment-box">
-                    <strong>کامنت‌های قرارداد:</strong><br>
-                    • <code>[Ma2]</code>: «امکان انجام این بند وجود ندارد، طرف اول در هنگام خرید هر محصول می‌بایست به قوانین مربوطه دقت کافی را داشته باشد.»<br>
-                    • <code>[MH(3R2)]</code>: «با توجه به اینکه برخی از قوانین یا مقررات به صورت عمومی گفته نمی‌شود و یا گاها روی سایت آپدیت نمی‌شود این بند باید باشد.»
-                </div>
-                <div class="analysis">
-                    <strong>تحلیل:</strong> تعهد عام به ارسال «کلیه بخشنامه‌ها» بار سنگین و مسئولیت تخلف از تعهد نامحدود به همراه دارد. تعهد آژانس باید مقید به بلیت‌ها و خدمات رزرو‌شده‌ی همان شرکت شود.
-                </div>
-                <div class="suggested-box">
-                    <div class="suggested-title">متن پیشنهادی مصالحه:</div>
-                    <div class="suggested-text">
-                        «طرف دوم موظف است بخشنامه‌ها و تغییرات مربوط به پروازها و رزروهای اختصاصیِ خریداری‌شده توسط طرف اول (اعم از کنسلی، تأخیر، تغییر ترمینال یا شرایط ویزا/سلامت) را در اسرع وقت از طریق ایمیل یا پیامک به رابط طرف اول اطلاع‌رسانی نماید. قوانین و بخشنامه‌های عمومی پیش از خرید در پنل رزرواسیون درج و ملاک عمل خواهد بود.»
-                    </div>
-                </div>
-            </div>
+        <h2>۳. چالش‌ها و تهدیدات بالقوه (نقاطی که باید مراقب باشید)</h2>
+        <div class="alert">
+            <ul>
+                <li><strong>ماده ۱۰-۳ (سلب مسئولیت عدم النفع):</strong> در قرارداد ذکر شده هیچ‌یک از طرفین مسئول «عدم النفع» یا خسارت غیرمستقیم نیستند. بنابراین در جلسه <strong>نباید</strong> بگویید: "چون سیستم شما کار نکرد ما اینقدر سود از دست دادیم." بلکه باید بگویید: "شما تعهدات مستقیم قراردادی (مثل انتقال سوابق حقوق و ایجاد داشبورد) را نقض کرده‌اید و ما هزینه پرداختی بابت این ماژول‌ها را مسترد خواهیم کرد."</li>
+                <li><strong>ماده ۶-۲ و ۶-۶ (تعهدات کارفرما):</strong> قطعا همکاران سیستم ادعا خواهد کرد که "شما زیرساخت، اطلاعات اولیه یا نیروی انسانی برای ورود اطلاعات را به موقع ندادید". <strong>(اقدام متقابل: قبل از جلسه با مدیر محصول چک کنید که تمام لاگ‌های ارسال دیتابیس، ایمیل‌ها و تیکت‌های همکاری ما آماده باشد تا این ادعا در نطفه خفه شود).</strong></li>
+                <li><strong>ماده ۸ (فورس ماژور):</strong> ممکن است قطعی اینترنت یا مشکلات زیرساختی را بهانه کنند. پاسخ شما: پیاده‌سازی فرمول‌های حقوق و دستمزد یا داشبورد ارتباطی به قطعی اینترنت کشور ندارد و قصور فنی است.</li>
+            </ul>
         </div>
-
-        <!-- مورد ۴: تعیین نماینده و رابط -->
-        <div class="section-card">
-            <div class="card-header">
-                <span>۴. بند ۴.۱: معرفی نماینده رابط و ادعای تکراری بودن</span>
-                <span class="badge badge-primary">اداری / رویه</span>
-            </div>
-            <div class="card-body">
-                <div class="comment-box">
-                    <strong>کامنت‌های قرارداد:</strong><br>
-                    • <code>[Ma4]</code>: «در ماده ۳ لحاظ شده است و تکراری است.»<br>
-                    • <code>[MH(5R4)]</code>: «این برای ماست بهتره جدا گفته بشه.»
-                </div>
-                <div class="analysis">
-                    <strong>راهکار:</strong> نظر هایپراستار را بپذیرید و بند را حفظ کنید. وجود این بند به نفع آبنوس گشت است، چرا که از ثبت سفارش توسط کارمندان غیرمجاز هایپراستار جلوگیری کرده و مسئولیت هرگونه خطای نماینده را بر عهده خود کارفرما قرار می‌دهد.
-                </div>
-            </div>
-        </div>
-
-        <!-- مورد ۵: فاکتور رسمی و مالیات ارزش افزوده -->
-        <div class="section-card">
-            <div class="card-header">
-                <span>۵. بند ۴.۳ و ضوابط ماده ۶: فاکتور رسمی، ارزش افزوده (VAT) و سامانه مؤدیان</span>
-                <span class="badge badge-primary">مالیاتی</span>
-            </div>
-            <div class="card-body">
-                <div class="comment-box">
-                    <strong>کامنت‌های قرارداد:</strong><br>
-                    • <code>[Ma6]</code>: «امکان صدور فاکتور و درج در سامانه مالیاتی وجود ندارد و خریدها و صورتحساب در پنل سازمانی قابل دسترس می‌باشد.»<br>
-                    • <code>[MH(7R6)]</code> و <code>[MH10]</code>: «نیاز به نظر دپارتمان تکس هست.»
-                </div>
-                <div class="analysis">
-                    <strong>تحلیل مالیاتی:</strong> بر اساس قانون دائمی مالیات بر ارزش افزوده و ضوابط سامانه مؤدیان، بلیت پروازهای داخلی مالیات مقطوع (VO) دارند که داخل بلیت درج می‌شود، بلیت‌های خارجی معاف هستند و تور/هتل مشمول ۱۰٪ ارزش افزوده است. آژانس نمی‌تواند کل بهای بلیت را به عنوان فروش خود فاکتور کند، بلکه تنها کارمزد/حق‌العمل صدور در سامانه مؤدیان ثبت می‌شود.
-                </div>
-                <div class="suggested-box">
-                    <div class="suggested-title">متن پیشنهادی استاندارد:</div>
-                    <div class="suggested-text">
-                        «صدور صورتحساب و اعمال مالیات بر ارزش افزوده دقیقاً منطبق بر قوانین جاری سامانه مؤدیان و بخشنامه‌های سازمان امور مالیاتی کشور خواهد بود؛ بدین نحو که برای بلیت‌های هواپیمایی، مالیات مربوطه در دل بلیت محاسبه گردیده و برای خدمات جانبی/گردشگری و کارمزد صدور، فاکتور الکترونیکی با احتساب نرخ قانونی مالیات بر ارزش افزوده در سامانه مؤدیان ثبت و ارسال خواهد شد.»
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- مورد ۶: وجه التزام دیرکرد -->
-        <div class="section-card">
-            <div class="card-header">
-                <span>۶. تبصره ۱ ماده ۶: وجه التزام (جریمه ماهانه ۵٪ تاخیر در پرداخت)</span>
-                <span class="badge badge-primary">مالی / تضمین</span>
-            </div>
-            <div class="card-body">
-                <div class="comment-box">
-                    <strong>کامنت قرارداد:</strong><br>
-                    • <code>[MH8]</code>: «وجه التزام برای شرکت قابل پذیرش نیست.»
-                </div>
-                <div class="analysis">
-                    <strong>راهکار:</strong> هایپراستار جریمه ریالی را نمی‌پذیرد. به‌جای پافشاری بر خسارت نقدی (که وصول آن نیز دشوار است)، اهرم فشار را به <strong>«توقف آنی خط اعتباری و خدمات»</strong> تبدیل کنید تا بدهی افزایش نیابد.
-                </div>
-                <div class="suggested-box">
-                    <div class="suggested-title">متن پیشنهادی بدون درج وجه التزام:</div>
-                    <div class="suggested-text">
-                        «در صورت تأخیر طرف اول در تسویه صورتحساب‌ها بیش از مهلت مقرر (۷ روز)، طرف دوم مجاز است بدون نیاز به اخطار قبلی، ارائه کلیه خدمات اعتباری، رزرواسیون و صدور بلیت را تا زمان تسویه کامل متوقف نماید و در صورت ادامه تأخیر، مبالغ بدهی از اعتبارات تخصیص‌یافته بعدی یا سایر تضامین مستهلک خواهد شد.»
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- مورد ۷: تایید صورت‌حساب هفتگی -->
-        <div class="section-card">
-            <div class="card-header">
-                <span>۷. ماده ۶: تأیید صورت‌حساب هفتگی</span>
-                <span class="badge badge-primary">حسابداری</span>
-            </div>
-            <div class="card-body">
-                <div class="comment-box">
-                    <strong>کامنت قرارداد:</strong><br>
-                    • <code>[MH9]</code>: «صورت حساب باید به تایید شرکت برسد.»
-                </div>
-                <div class="analysis">
-                    <strong>راهکار:</strong> تأیید صورت‌حساب حق کارفرماست، اما برای جلوگیری از بلاتکلیفی و تعویق پرداخت‌ها، باید مهلت مشخص (Time-limit) برای اعلام مغایرت قید شود تا سکوت آن‌ها به منزله تأیید باشد.
-                </div>
-                <div class="suggested-box">
-                    <div class="suggested-title">متن پیشنهادی:</div>
-                    <div class="suggested-text">
-                        «طرف اول موظف است ظرف مدت حداکثر ۳ روز کاری از تاریخ دریافت صورت‌حساب، نسبت به تأیید یا اعلام مغایرت مکتوب آن اقدام نماید؛ در غیر این‌صورت صورت‌حساب ارسالی تأییدشده تلقی گردیده و ملاک تسویه خواهد بود.»
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- مورد ۸: محرمانگی اطلاعات مسافران -->
-        <div class="section-card">
-            <div class="card-header">
-                <span>۸. بند ۹.۲: محرمانگی اطلاعات و انتقال به تأمین‌کنندگان</span>
-                <span class="badge badge-primary">حقوقی / اطلاعاتی</span>
-            </div>
-            <div class="card-body">
-                <div class="comment-box">
-                    <strong>کامنت‌های قرارداد:</strong><br>
-                    • <code>[Ma13]</code>: «حذف شود، کلیه موارد اعلامی به ارائه‌دهندگان اصلی خدمت منتقل خواهد شد.»<br>
-                    • <code>[MH(14R13)]</code>: «در هر صورت این بند باید باشد چرا که طرف دوم به اطلاعات اشخاص طرف اول دسترسی دارد.»
-                </div>
-                <div class="analysis">
-                    <strong>تحلیل:</strong> حساسیت هایپراستار نسبت به حفاظت از داده‌های شخصی (Personal Data) کارکنانش طبیعی است. راهکار، حذف بند نیست؛ بلکه مستثنی کردن ارسال اطلاعات به هتل‌ها و ایرلاین‌ها از شمول نقض محرمانگی است.
-                </div>
-                <div class="suggested-box">
-                    <div class="suggested-title">متن پیشنهادی:</div>
-                    <div class="suggested-text">
-                        «طرف دوم متعهد به حفظ محرمانگی اطلاعات اشخاص و مسافران معرفی‌شده از سوی طرف اول می‌باشد. بدیهی است ارسال و ارائه اطلاعات هویتی مسافران به مراجع ذی‌ربط، ایرلاین‌ها، هتل‌ها و شرکت‌های کارگزار خدمات صرفاً در چارچوب الزامات فرآیند صدور بلیت و رزرواسیون، افشای اطلاعات تلقی نخواهد شد.»
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- مورد ۹: زبان ملاک تفسیر -->
-        <div class="section-card">
-            <div class="card-header">
-                <span>۹. ماده ۱۱: اعتبار و زبان ملاک تفسیر قرارداد</span>
-                <span class="badge badge-primary">حقوقی / حل اختلاف</span>
-            </div>
-            <div class="card-body">
-                <div class="comment-box">
-                    <strong>کامنت قرارداد:</strong><br>
-                    • <code>[MH15]</code>: «اعتبار دو زبان یکی هست.»
-                </div>
-                <div class="analysis">
-                    <strong>تحلیل:</strong> در صورت بروز اختلاف در دادگاه‌های ایران، مطابق قانون آیین دادرسی مدنی زبان رسمی محاکم فارسی است؛ اما برای رعایت فرمت قراردادهای دوزبانه ماف، تساوی اعتبار دو نسخه با شرط حاکمیت زبان محلی در محاکم ایران تصریح می‌شود.
-                </div>
-                <div class="suggested-box">
-                    <div class="suggested-title">متن پیشنهادی:</div>
-                    <div class="suggested-text">
-                        «این قرارداد در دو نسخه فارسی و انگلیسی تنظیم گردیده و هر دو نسخه دارای اعتبار یکسان می‌باشند. با این وجود، در صورت بروز هرگونه تعارض تفسیری در محاکم و مراجع قضایی جمهوری اسلامی ایران، متن فارسی ملاک عمل و استناد خواهد بود.»
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
-</div>
+
+    <div class="page">
+        <h2>۴. استراتژی گام‌به‌گام و دیالوگ‌های پیشنهادی شما در جلسه</h2>
+
+        <h3>گام اول: تثبیت موضع و میخ‌کوب کردن حقوقی (شروع جلسه)</h3>
+        <p><strong>چه بگویید:</strong> <em>"آقایان، ما امروز اینجا جمع نشدیم که درباره باگ‌های روزمره نرم‌افزار صحبت کنیم. ما امروز با یک «بحران نقض اساسی قرارداد» مواجهیم. طبق ماده ۳-۱، قرارداد شما در تاریخ ۲۵ اسفند ۱۴۰۴ تمام شده است. امروز بیش از ۵ ماه از انقضای قرارداد می‌گذرد. بر اساس ماده ۴-۵ و ماده ۵-۱، شما متعهد به اجرای متدولوژی استقرار بوده‌اید که خروجی آن به تایید ما نرسیده است. نامه ارسالی ما در مرداد ماه، اتمام حجت حقوقی ما بوده است."</em></p>
+
+        <h3>گام دوم: تشریح فنی-حقوقی نواقص (توسط شما و مدیر محصول)</h3>
+        <p>با ارجاع به نامه ۱۴۰۵/۰۵/۲۷ روی ۴ محور اصلی مانور دهید:</p>
+        <ol>
+            <li><strong>داشبورد مدیریتی:</strong> <em>"پیوست قرارداد برای داشبورد شامل شاخص‌های دقیق (GMV، مطالبات معوق، Aging) بوده است. این ماژول اصلاً تحویل نشده است. این قلب تپنده‌ی خرید ما بوده است."</em></li>
+            <li><strong>ماژول جبران خدمات (حقوق و دستمزد):</strong> <em>"سیستم حقوق بدون انتقال سوابق (History) غیرقابل استفاده است. شما نتوانستید مهاجرت داده را انجام دهید، این یعنی ماژول ناقص و Defective است."</em></li>
+            <li><strong>وفادارسازی (Loyalty):</strong> <em>"دو API حیاتی برای تسویه با امتیاز و برگشت امتیاز تحویل نشده. سیستم شما به درد بیزینس آنلاین ما نخورده است."</em></li>
+            <li><strong>مکاتبات اداری:</strong> <em>"بخش ورود و خروج در کارمند الکترونیک هنوز عملیاتی نیست."</em></li>
+        </ol>
+
+        <h3>گام سوم: بستن راه‌های فرار (پیش‌دستی حقوقی)</h3>
+        <p><strong>چه بگویید:</strong> <em>"اگر ادعا دارید ما دیتا ندادیم، طبق ماده ۳-۳ شما موظف بودید ظرف ۲ هفته پس از خاتمه هر فاز به‌صورت کتبی اعلام نواقص کنید. آیا نامه‌ای رسمی مبنی بر توقف کار به دلیل عدم همکاری فلای‌تودی دارید؟ خیر. پس تقصیر ۱۰۰ درصد متوجه تیم پیاده‌سازی مجری است."</em></p>
+
+        <h3>گام چهارم: ارائه راهکارها و اولتیماتوم (Climax جلسه)</h3>
+        <p>شما باید دو مسیر پیش روی آن‌ها بگذارید:</p>
+        <p><strong>مسیر اول (اقدام حقوقی - چماق):</strong> <em>"طبق ماده ۹ قرارداد (حل اختلاف)، این جلسه به منزله‌ی مذاکره مستقیم است. اگر امروز به یک برنامه زمان‌بندی قطعی نرسیم، مدیریت حقوقی مکلف است از طریق مراجع ذی‌صلاح قضایی، ضمن توقف پرداخت‌ها و ضبط سپرده حسن انجام کار (ماده ۲-۲-۶)، دعوای الزام به ایفای تعهد و استرداد وجوه پرداختی بابت ماژول‌های ناقص را ثبت کند."</em></p>
+        <p><strong>مسیر دوم (الحاقیه زمان‌بندی - هویج):</strong> <em>"اگر می‌خواهید حسن نیت نشان دهید، ما آماده‌ایم یک الحاقیه (Addendum) تنظیم کنیم. در این الحاقیه تمام خواسته‌های نامه مرداد ماه با زمان‌بندی صریح (مثلاً حداکثر یک ماه) گنجانده می‌شود. <strong>اما شرط اصلی آن تعیین «وجه التزام روزانه» (جریمه دیرکرد) برای تاخیر از تاریخ الحاقیه است.</strong> بدون جریمه تاخیر، ما هیچ زمان اضافه‌ای به شما نمی‌دهیم."</em></p>
+
+        <h2>۵. چک‌لیست صورتجلسه پایانی (بسیار مهم)</h2>
+        <p>اجازه ندهید کسی بدون امضای یک صورتجلسه از اتاق خارج شود. صورتجلسه باید شامل این موارد باشد:</p>
+        <ul>
+            <li>اقرار کتبی پیمانکار (همکاران سیستم) به عدم تحویل کامل ماژول‌های داشبورد، جبران خدمات، مکاتبات و وفاداری تا تاریخ امروز.</li>
+            <li>تعیین یک Deadline قطعی و غیرقابل تمدید (مثلاً حداکثر ۳۰ روز کاری) برای تحویل نهایی و بدون نقص موارد مطروحه در نامه ۱۴۰۵/۰۵/۲۷.</li>
+            <li>درج صریح این بند: "در صورت عدم انجام تعهدات در موعد مقرر در این صورتجلسه، کارفرما (آبنوس گشت) حق فسخ قرارداد در بخش‌های تحویل نشده، ضبط تضمین حسن انجام کار و مطالبه وجوه پرداختی را به صورت یک‌جانبه خواهد داشت."</li>
+            <li>امضای آقای میثم حسین‌زاده عیان (یا نماینده رسمی حاضر) و رئیس هیئت مدیره شما (آقای سارخانی).</li>
+        </ul>
+        
+        <div class="footer-note">
+            تهیه شده برای جلسه مورخ دوشنبه، ۲۷ مهر ۱۴۰۵ (۱۹ اکتبر ۲۰۲۶) - مدیریت حقوقی شرکت آبنوس گشت تهران (فلای تودی)
+        </div>
+    </div>
 
 </body>
 </html>
